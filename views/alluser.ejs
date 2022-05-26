@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>All User</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<style>
+    input {
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+
+    select {
+        font-family: 'Quicksand', sans-serif;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+</style>
+
+
+<body class="bg-light">
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-5" href="/" style="color: white;">Log Out</a>
+        </div>
+    </nav>
+    <div class="container text-center mt-5">
+        <h1>All User</h1>
+        <form action="/admin/alluser" method="get">
+            <input type="search" name="name" value="" placeholder="">
+            <input type="submit" value="search" class="btn btn-dark"><br><br>
+        </form>
+        <table class="table table-dark table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Since</th>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Action</th>
+
+            </tr>
+            <% result.forEach(x=> { %>
+                <tr>
+                    <td>
+                        <%=x.name%>
+                    </td>
+                    <td>
+                        <%=x.gender %>
+                    </td>
+                    <td>
+                        <%=changeDate(x.createdAt)%>
+                    </td>
+                    <td>
+                        <%=x.User.styleName()%>
+                    </td>
+                    <td>
+                        <%=x.User.email%>
+                    </td>
+                    <td>
+                        <%=x.User.role%>
+                    </td>
+                    <td>
+                        <a href="/admin/alluser/view/<%=x.UserId%>" class="text-white">View</a>
+                    </td>
+                </tr>
+                <% })%>
+
+        </table>
+    </div>
+</body>
+
+</html>

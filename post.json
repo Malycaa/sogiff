@@ -1,0 +1,32 @@
+[
+  {
+    "imageURL": "https://imgur.com/a/eUQdRMw",
+    "like": 10,
+    "UserId": 1,
+    "caption": "melihat angka?"
+  },
+  {
+    "imageURL": "https://imgur.com/a/8ZCvfRI",
+    "like": 20,
+    "UserId": 1,
+    "caption": "eye contact saat melamar kerja"
+  },
+  {
+    "imageURL": "https://imgur.com/a/Xxc46rj",
+    "like": 50,
+    "UserId": 1,
+    "caption": "yang beneeer?"
+  },
+  {
+    "imageURL": "https://imgur.com/a/UBfTsPy",
+    "like": 1,
+    "UserId": 1,
+    "caption": "ciiissss!"
+  },
+  {
+    "imageURL": "https://imgur.com/a/hftb45w",
+    "like": 100,
+    "UserId": 1,
+    "caption": "first time learning javascript"
+  }
+]
